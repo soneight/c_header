@@ -6,6 +6,13 @@
     Math C related functionality
 */
 
+// GCC under 14 do not have some math functions (l,f suffix) in std namespace
+#if defined(__GNUC__) && !defined(__clang__) && (__GNUC__ < 14)
+#define SON8_C_HEADER_MATH_NAMESPACE_STD
+#else
+#define SON8_C_HEADER_MATH_NAMESPACE_STD std
+#endif
+
 #include "base.hxx"
 
 #include <cfenv>
@@ -70,42 +77,42 @@ namespace son8::c {
     // -- C++11
     using std::double_t;
     using std::float_t;
-    using std::acosf;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::acosf;
     using std::acosh;
     using std::acoshf;
     using std::acoshl;
-    using std::acosl;
-    using std::asinf;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::acosl;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::asinf;
     using std::asinh;
     using std::asinhf;
     using std::asinhl;
-    using std::asinl;
-    using std::atan2f;
-    using std::atan2l;
-    using std::atanf;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::asinl;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::atan2f;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::atan2l;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::atanf;
     using std::atanh;
     using std::atanhf;
     using std::atanhl;
-    using std::atanl;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::atanl;
     using std::cbrt;
     using std::cbrtf;
     using std::cbrtl;
-    using std::ceilf;
-    using std::ceill;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::ceilf;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::ceill;
     using std::copysign;
     using std::copysignf;
     using std::copysignl;
-    using std::cosf;
-    using std::coshf;
-    using std::coshl;
-    using std::cosl;
-    using std::fabsf;
-    using std::fabsl;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::cosf;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::coshf;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::coshl;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::cosl;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::fabsf;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::fabsl;
     using std::fdim;
     using std::fdimf;
     using std::fdiml;
-    using std::floorf;
-    using std::floorl;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::floorf;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::floorl;
     using std::fma;
     using std::fmaf;
     using std::fmal;
@@ -115,11 +122,11 @@ namespace son8::c {
     using std::fmin;
     using std::fminf;
     using std::fminl;
-    using std::fmodf;
-    using std::fmodl;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::fmodf;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::fmodl;
     using std::fpclassify;
-    using std::frexpf;
-    using std::frexpl;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::frexpf;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::frexpl;
     using std::erf;
     using std::erfc;
     using std::erfcf;
@@ -129,8 +136,8 @@ namespace son8::c {
     using std::exp2;
     using std::exp2f;
     using std::exp2l;
-    using std::expf;
-    using std::expl;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::expf;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::expl;
     using std::expm1;
     using std::expm1f;
     using std::expm1l;
@@ -150,8 +157,8 @@ namespace son8::c {
     using std::isnan;
     using std::isnormal;
     using std::isunordered;
-    using std::ldexpf;
-    using std::ldexpl;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::ldexpf;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::ldexpl;
     using std::lgamma;
     using std::lgammaf;
     using std::lgammal;
@@ -164,10 +171,10 @@ namespace son8::c {
     using std::logb;
     using std::logbf;
     using std::logbl;
-    using std::logf;
-    using std::logl;
-    using std::log10f;
-    using std::log10l;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::logf;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::logl;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::log10f;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::log10l;
     using std::log1p;
     using std::log1pf;
     using std::log1pl;
@@ -180,8 +187,8 @@ namespace son8::c {
     using std::lround;
     using std::lroundf;
     using std::lroundl;
-    using std::modff;
-    using std::modfl;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::modff;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::modfl;
     using std::nan;
     using std::nanf;
     using std::nanl;
@@ -194,8 +201,8 @@ namespace son8::c {
     using std::nexttoward;
     using std::nexttowardf;
     using std::nexttowardl;
-    using std::powf;
-    using std::powl;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::powf;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::powl;
     using std::remainder;
     using std::remainderf;
     using std::remainderl;
@@ -212,16 +219,16 @@ namespace son8::c {
     using std::scalblnf;
     using std::scalblnl;
     using std::signbit;
-    using std::sinf;
-    using std::sinhf;
-    using std::sinhl;
-    using std::sinl;
-    using std::sqrtf;
-    using std::sqrtl;
-    using std::tanf;
-    using std::tanhf;
-    using std::tanhl;
-    using std::tanl;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::sinf;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::sinhf;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::sinhl;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::sinl;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::sqrtf;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::sqrtl;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::tanf;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::tanhf;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::tanhl;
+    using SON8_C_HEADER_MATH_NAMESPACE_STD::tanl;
     using std::tgamma;
     using std::tgammaf;
     using std::tgammal;
