@@ -236,6 +236,8 @@ namespace son8::c {
     using std::truncf;
     using std::truncl;
     // -- C++17
+// clang on macos (llvm) does not support math special functions in std (fully?)
+#if defined(__cpp_lib_math_special_functions) || !defined(__clang__)
     using std::assoc_laguerre;
     using std::assoc_laguerref;
     using std::assoc_laguerrel;
@@ -299,6 +301,7 @@ namespace son8::c {
     using std::sph_neumann;
     using std::sph_neumannf;
     using std::sph_neumannl;
+#endif // __cpp_lib_math_special_functions
     // -- C++20
     //using std::lerp;
 } // namespace son8::c
