@@ -1,12 +1,10 @@
 #ifndef SON8_C_UTIL_HXX
 #define SON8_C_UTIL_HXX
-
 /*
     Utility (other) C related functionality
 */
-
 #include "base.hxx"
-
+// std headers
 #include <clocale>
 #include <cstdarg>
 #include <ctime>

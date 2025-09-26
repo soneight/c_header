@@ -1,12 +1,10 @@
 #ifndef SON8_C_BYTE_HXX
 #define SON8_C_BYTE_HXX
-
 /*
     Memory C related functionality
 */
-
-#include "base.hxx"
-
+#include <son8/c/base.hxx>
+// std headers
 #include <cstring>
 
 namespace son8::c {

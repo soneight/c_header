@@ -1,13 +1,11 @@
 #pragma once
 #ifndef SON8_C_WIDE_HXX
 #define SON8_C_WIDE_HXX
-
 /*
     Wide character C related functionality
 */
-
 #include "base.hxx"
-
+// std headers
 #include <cuchar>
 #include <cwchar>
 #include <cwctype>
@@ -29,7 +27,7 @@ namespace son8::c {
     using std::c32rtomb;
     using std::mbrtoc16;
     using std::mbrtoc32;
-    // -- C++20
+    // -- C++20 not supported, commenting out for completeness
     //using std::c8rtomb;
     //using std::mbrtoc8;
     // wchar

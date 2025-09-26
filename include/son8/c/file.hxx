@@ -1,12 +1,10 @@
 #ifndef SON8_C_FILE_HXX
 #define SON8_C_FILE_HXX
-
 /*
     File C related functionality
 */
-
 #include "base.hxx"
-
+// std headers
 #include <cstdio>
 
 namespace son8::c {

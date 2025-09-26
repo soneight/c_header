@@ -1,14 +1,12 @@
 #ifndef SON8_C_BASE_HXX
 #define SON8_C_BASE_HXX
-
 /*
     Base C related functionality
 */
-
 #ifndef __cplusplus
 #error "son8::c_header library interface requires C++"
 #endif
-
+// std headers
 #include <cassert>
 #include <cinttypes>
 #include <climits>

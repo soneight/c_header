@@ -1,12 +1,10 @@
 #ifndef SON8_C_CHAR_HXX
 #define SON8_C_CHAR_HXX
-
 /*
     Character C related functionality
 */
-
 #include "base.hxx"
-
+// std headers
 #include <cctype>
 #include <cstring>
 
