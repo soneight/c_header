@@ -9,7 +9,7 @@
 #include <cfloat>
 #include <cmath>
 // GCC under ver 14 do not have some math funcs (l,f suffix) in std namespace
-#if defined(__GNUC__) && !defined(__clang__) && (__GNUC__ < 14)
+#if !defined(__clang__) && defined(__GNUC__) && (__GNUC__ < 14)
 #define SON8_C_HEADER_MATH_NAMESPACE_STD
 #else
 #define SON8_C_HEADER_MATH_NAMESPACE_STD std
