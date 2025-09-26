@@ -1,14 +1,14 @@
 #ifndef SON8_C_HXX
 #define SON8_C_HXX
 
-#include "c/base.hxx"
-#include "c/byte.hxx"
-#include "c/char.hxx"
-#include "c/exec.hxx"
-#include "c/file.hxx"
-#include "c/math.hxx"
-#include "c/util.hxx"
-#include "c/wide.hxx"
+#include <son8/c/base.hxx>
+#include <son8/c/byte.hxx>
+#include <son8/c/char.hxx>
+#include <son8/c/exec.hxx>
+#include <son8/c/file.hxx>
+#include <son8/c/math.hxx>
+#include <son8/c/util.hxx>
+#include <son8/c/wide.hxx>
 
 #endif//SON8_C_HXX
 

@@ -4,7 +4,7 @@
 /*
     Wide character C related functionality
 */
-#include "base.hxx"
+#include <son8/c/base.hxx>
 // std headers
 #include <cuchar>
 #include <cwchar>

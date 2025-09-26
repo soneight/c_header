@@ -3,7 +3,7 @@
 /*
     Math C related functionality
 */
-#include "base.hxx"
+#include <son8/c/base.hxx>
 // std headers
 #include <cfenv>
 #include <cfloat>
