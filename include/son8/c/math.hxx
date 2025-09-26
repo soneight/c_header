@@ -1,4 +1,3 @@
-#pragma once
 #ifndef SON8_C_MATH_HXX
 #define SON8_C_MATH_HXX
 

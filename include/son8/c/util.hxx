@@ -1,4 +1,3 @@
-#pragma once
 #ifndef SON8_C_UTIL_HXX
 #define SON8_C_UTIL_HXX
 
