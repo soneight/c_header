@@ -66,4 +66,4 @@ namespace son8::c {
 
 #endif//SON8_C_FILE_HXX
 
-/*ᦒ Ⓒ 2024 Oleg'Ease'Kharchuk ᦒ*/
+// Ⓒ 2024-2025 Oleg'Ease'Kharchuk ᦒ
