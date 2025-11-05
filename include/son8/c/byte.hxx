@@ -14,7 +14,7 @@ namespace son8::c {
     using std::malloc;
     using std::realloc;
     // -- C++17
-#ifndef SON8_C_HEADER_MSVC_DISABLED
+#ifndef _MSC_VER
     using std::aligned_alloc;
 #endif
     // string

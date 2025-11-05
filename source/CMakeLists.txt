@@ -3,7 +3,3 @@ set( CMAKE_CXX_STANDARD_REQUIRED ON )
 set( CMAKE_CXX_EXTENSIONS OFF )
 
 add_library( ${SON8PROJ} INTERFACE )
-
-if ( MSVC )
-    target_compile_definitions( ${SON8PROJ} INTERFACE SON8_C_HEADER_MSVC_DISABLED )
-endif( )
