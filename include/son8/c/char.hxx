@@ -9,25 +9,8 @@
 #include <cstring>
 
 namespace son8::c {
-    // base.hxx->inttypes
-    // -- C++11
-    using std::strtoimax;
-    using std::strtoumax;
-    // base.hxx->stdlib
-    using std::atof;
-    using std::atoi;
-    using std::atol;
-    using std::mblen;
-    using std::strtod;
-    using std::strtof;
-    using std::strtol;
-    using std::strtold;
-    using std::strtoul;
-    // -- C++11
-    using std::atoll;
-    using std::strtoll;
-    using std::strtoull;
-    // ctype
+    // C++03
+    // -- cctype
     using std::isalnum;
     using std::isalpha;
     using std::iscntrl;
@@ -41,9 +24,17 @@ namespace son8::c {
     using std::isxdigit;
     using std::tolower;
     using std::toupper;
-    // -- C++11
-    using std::isblank;
-    // string
+    // -- cstdlib<-base.hxx
+    using std::atof;
+    using std::atoi;
+    using std::atol;
+    using std::mblen;
+    using std::strtod;
+    using std::strtof;
+    using std::strtol;
+    using std::strtold;
+    using std::strtoul;
+    // -- cstring
     using std::strcat;
     using std::strchr;
     using std::strcmp;
@@ -61,6 +52,16 @@ namespace son8::c {
     using std::strstr;
     using std::strtok;
     using std::strxfrm;
+    // C++11
+    // -- cctype
+    using std::isblank;
+    // -- cinttypes<-base.hxx
+    using std::strtoimax;
+    using std::strtoumax;
+    // -- cstdlib<-base.hxx
+    using std::atoll;
+    using std::strtoll;
+    using std::strtoull;
 } // namespace son8::c
 
 #endif//SON8_C_CHAR_HXX

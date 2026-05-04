@@ -5,27 +5,29 @@
 */
 #include <son8/c/base.hxx>
 // std headers
-#include <cerrno>
+#include <cerrno> // IWYU pragma: keep
 #include <csetjmp>
 #include <csignal>
 
 namespace son8::c {
-    // base.hxx->stdlib
+    // C++03
+    // -- csetjmp
+    using std::jmp_buf;
+    using std::longjmp;
+    // -- csignal
+    using std::sig_atomic_t;
+    using std::signal;
+    using std::raise;
+    // -- cstdlib<-base.hxx
     using std::abort;
     using std::atexit;
     using std::exit;
     using std::system;
-    // -- C++11
+    // C++11
+    // -- cstdlib<-base.hxx
+    using std::_Exit;
     using std::at_quick_exit;
     using std::quick_exit;
-    using std::_Exit;
-    // setjmp
-    using std::jmp_buf;
-    using std::longjmp;
-    // signal
-    using std::sig_atomic_t;
-    using std::signal;
-    using std::raise;
 } // namespace son8::c
 
 #endif//SON8_C_EXEC_HXX

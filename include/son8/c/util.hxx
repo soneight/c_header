@@ -10,18 +10,19 @@
 #include <ctime>
 
 namespace son8::c {
-    // base.hxx->stdlib
+    // C++03
+    // -- clocale
+    using std::lconv;
+    using std::localeconv;
+    using std::setlocale;
+    // -- cstdlib<-base.hxx
     using std::bsearch;
     using std::qsort;
     using std::rand;
     using std::srand;
-    // locale
-    using std::lconv;
-    using std::localeconv;
-    using std::setlocale;
-    // stdarg
+    // -- cstdarg
     using std::va_list;
-    // time
+    // -- ctime
     using std::clock_t;
     using std::time_t;
     using std::tm;
@@ -34,7 +35,8 @@ namespace son8::c {
     using std::mktime;
     using std::time;
     using std::strftime;
-    // -- C++17
+    // C++17
+    // -- ctime
     using std::timespec;
     using std::timespec_get;
 } // namespace son8::c

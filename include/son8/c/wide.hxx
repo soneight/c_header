@@ -10,23 +10,15 @@
 #include <cwctype>
 
 namespace son8::c {
-    // base.hxx->inttypes
-    // -- C++11
-    using std::wcstoimax;
-    using std::wcstoumax;
-    // base.hxx->stdlib
+    // C++03
+    // -- cstdlib<-base.hxx
     using std::mbstowcs;
     using std::mbtowc;
     using std::wcstombs;
     using std::wctomb;
-    // uchar
+    // -- cuchar
     using std::mbstate_t;
-    // -- C++11
-    using std::c16rtomb;
-    using std::c32rtomb;
-    using std::mbrtoc16;
-    using std::mbrtoc32;
-    // wchar
+    // -- cwchar
     using std::btowc;
     using std::fgetwc;
     using std::fgetws;
@@ -83,11 +75,7 @@ namespace son8::c {
     using std::vfwprintf;
     using std::vswprintf;
     using std::vwprintf;
-    // -- C++11
-    using std::vwscanf;
-    using std::vfwscanf;
-    using std::vswscanf;
-    // wctype
+    // -- cwctype
     using std::wctrans_t;
     using std::wctype_t;
     using std::wint_t;
@@ -108,7 +96,20 @@ namespace son8::c {
     using std::towupper;
     using std::wctrans;
     using std::wctype;
-    // -- C++11
+    // C++11
+    // -- cinttypes<-base.hxx
+    using std::wcstoimax;
+    using std::wcstoumax;
+    // -- cuchar
+    using std::c16rtomb;
+    using std::c32rtomb;
+    using std::mbrtoc16;
+    using std::mbrtoc32;
+    // -- cwchar
+    using std::vwscanf;
+    using std::vfwscanf;
+    using std::vswscanf;
+    // -- cwctype
     using std::iswblank;
 } // namespace son8::c
 

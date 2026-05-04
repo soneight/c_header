@@ -8,7 +8,8 @@
 #include <cstdio>
 
 namespace son8::c {
-    // stdio
+    // C++03
+    // -- cstdio
     using std::FILE;
     using std::fpos_t;
     using std::clearerr;
@@ -51,14 +52,15 @@ namespace son8::c {
     using std::vfprintf;
     using std::vprintf;
     using std::vsprintf;
-    // -- C++11
+    // C++11
+    // -- cstdio
     using std::snprintf;
     using std::vfscanf;
     using std::vscanf;
     using std::vsnprintf;
     using std::vsscanf;
-    // -- C++11 deprecated, C++14 removed
-    //using std::gets;
+    // -- depr-rm?
+    // using std::gets; // depr C++11, rm C++14
 } // namespace son8::c
 
 #endif//SON8_C_FILE_HXX

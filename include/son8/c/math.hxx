@@ -16,37 +16,8 @@
 #endif
 
 namespace son8::c {
-    // base.hxx->inttypes
-    // -- C++11
-    using std::imaxabs;
-    using std::imaxdiv;
-    // base.hxx->stdlib
-    using std::div_t;
-    using std::ldiv_t;
-    using std::abs;
-    using std::div;
-    using std::labs;
-    using std::ldiv;
-    // -- C++11
-    using std::lldiv_t;
-    using std::llabs;
-    using std::lldiv;
-    // fenv
-    // -- C++11
-    using std::fenv_t;
-    using std::fexcept_t;
-    using std::fegetenv;
-    using std::fegetexceptflag;
-    using std::fegetround;
-    using std::feclearexcept;
-    using std::feholdexcept;
-    using std::feraiseexcept;
-    using std::fesetenv;
-    using std::fesetexceptflag;
-    using std::fesetround;
-    using std::fetestexcept;
-    using std::feupdateenv;
-    // math
+    // C++03
+    // -- cmath
     using std::abs;
     using std::acos;
     using std::asin;
@@ -70,7 +41,32 @@ namespace son8::c {
     using std::sqrt;
     using std::tan;
     using std::tanh;
-    // -- C++11
+    // -- cstdlib<-base.hxx
+    using std::div_t;
+    using std::ldiv_t;
+    using std::abs;
+    using std::div;
+    using std::labs;
+    using std::ldiv;
+    // C++11
+    // -- cfenv
+    using std::fenv_t;
+    using std::fexcept_t;
+    using std::fegetenv;
+    using std::fegetexceptflag;
+    using std::fegetround;
+    using std::feclearexcept;
+    using std::feholdexcept;
+    using std::feraiseexcept;
+    using std::fesetenv;
+    using std::fesetexceptflag;
+    using std::fesetround;
+    using std::fetestexcept;
+    using std::feupdateenv;
+    // -- cinttypes<-base.hxx
+    using std::imaxabs;
+    using std::imaxdiv;
+    // -- cmath
     using std::double_t;
     using std::float_t;
     using SON8_C_HEADER_MATH_NAMESPACE_STD::acosf;
@@ -231,7 +227,12 @@ namespace son8::c {
     using std::trunc;
     using std::truncf;
     using std::truncl;
-    // -- C++17
+    // -- cstdlib<-base.hxx
+    using std::lldiv_t;
+    using std::llabs;
+    using std::lldiv;
+    // C++17
+    // -- cmath
 // clang on macos (llvm) does not support math special functions in std (fully?)
 #if defined(__cpp_lib_math_special_functions) || !defined(__clang__)
     using std::assoc_laguerre;

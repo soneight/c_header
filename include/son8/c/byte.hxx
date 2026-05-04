@@ -8,21 +8,23 @@
 #include <cstring>
 
 namespace son8::c {
-    // base.hxx->stdlib
+    // C++03
+    // -- cstdlib<-base.hxx
     using std::calloc;
     using std::free;
     using std::malloc;
     using std::realloc;
-    // -- C++17
-#ifndef _MSC_VER
-    using std::aligned_alloc;
-#endif
-    // string
+    // -- cstring
     using std::memchr;
     using std::memcmp;
     using std::memcpy;
     using std::memmove;
     using std::memset;
+    // C++17
+    // -- cstdlib<-base.hxx
+#   ifndef _MSC_VER
+    using std::aligned_alloc;
+#   endif
 } // namespace son8::c
 
 #endif//SON8_C_BYTE_HXX
