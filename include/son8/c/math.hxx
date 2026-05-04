@@ -6,7 +6,7 @@
 #include <son8/c/base.hxx>
 // std headers
 #include <cfenv>
-#include <cfloat>
+#include <cfloat> // IWYU pragma: keep
 #include <cmath>
 // GCC under ver 14 do not have some math funcs (l,f suffix) in std namespace
 #if !defined(__clang__) && defined(__GNUC__) && (__GNUC__ < 14)
@@ -298,8 +298,7 @@ namespace son8::c {
     using std::sph_neumannf;
     using std::sph_neumannl;
 #endif // __cpp_lib_math_special_functions
-    // -- C++20 not supported, commenting out for completeness
-    //using std::lerp;
+
 } // namespace son8::c
 
 #endif//SON8_C_MATH_HXX

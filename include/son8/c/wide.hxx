@@ -26,9 +26,6 @@ namespace son8::c {
     using std::c32rtomb;
     using std::mbrtoc16;
     using std::mbrtoc32;
-    // -- C++20 not supported, commenting out for completeness
-    //using std::c8rtomb;
-    //using std::mbrtoc8;
     // wchar
     using std::btowc;
     using std::fgetwc;
