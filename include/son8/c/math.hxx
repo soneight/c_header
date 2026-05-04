@@ -18,7 +18,6 @@
 namespace son8::c {
     // C++03
     // -- cmath
-    using std::abs;
     using std::acos;
     using std::asin;
     using std::atan;
@@ -210,6 +209,9 @@ namespace son8::c {
     using std::scalbln;
     using std::scalblnf;
     using std::scalblnl;
+    using std::scalbn;
+    using std::scalbnf;
+    using std::scalbnl;
     using std::signbit;
     using SON8_C_HEADER_MATH_NAMESPACE_STD::sinf;
     using SON8_C_HEADER_MATH_NAMESPACE_STD::sinhf;

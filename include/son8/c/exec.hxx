@@ -3,6 +3,7 @@
 /*
     Execution C related functionality
 */
+#include <cstdlib>
 #include <son8/c/base.hxx>
 // std headers
 #include <cerrno> // IWYU pragma: keep
@@ -23,6 +24,7 @@ namespace son8::c {
     using std::atexit;
     using std::exit;
     using std::system;
+    using std::getenv;
     // C++11
     // -- cstdlib<-base.hxx
     using std::_Exit;
