@@ -4,7 +4,7 @@
     Character C related functionality
 */
 #include <son8/c/base.hxx>
-// std headers
+// std
 #include <cctype>
 #include <cstring>
 

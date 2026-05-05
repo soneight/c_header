@@ -4,14 +4,13 @@
     File C related functionality
 */
 #include <son8/c/base.hxx>
-// std headers
+// std
 #include <cstdio>
 
 namespace son8::c {
     // C++03
     // -- cstdio
     using std::FILE;
-    using std::fpos_t;
     using std::clearerr;
     using std::getc;
     using std::getchar;
@@ -23,6 +22,7 @@ namespace son8::c {
     using std::fgets;
     using std::fflush;
     using std::fopen;
+    using std::fpos_t;
     using std::fprintf;
     using std::fputc;
     using std::fputs;

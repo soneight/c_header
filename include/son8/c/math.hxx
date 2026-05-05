@@ -4,10 +4,13 @@
     Math C related functionality
 */
 #include <son8/c/base.hxx>
-// std headers
+// std
 #include <cfenv>
 #include <cfloat> // IWYU pragma: keep
 #include <cmath>
+// -- depr-rm?
+// #include <ccomplex> // depr C++17, rm C++20
+// #include <ctgmath> // depr C++17, rm C++20
 // GCC under ver 14 do not have some math funcs (l,f suffix) in std namespace
 #if !defined(__clang__) && defined(__GNUC__) && (__GNUC__ < 14)
 #define SON8_C_HEADER_MATH_NAMESPACE_STD
@@ -41,33 +44,31 @@ namespace son8::c {
     using std::tan;
     using std::tanh;
     // -- cstdlib<-base.hxx
-    using std::div_t;
-    using std::ldiv_t;
     using std::abs;
     using std::div;
+    using std::div_t;
     using std::labs;
     using std::ldiv;
+    using std::ldiv_t;
     // C++11
     // -- cfenv
-    using std::fenv_t;
-    using std::fexcept_t;
     using std::fegetenv;
     using std::fegetexceptflag;
     using std::fegetround;
     using std::feclearexcept;
     using std::feholdexcept;
+    using std::fenv_t;
     using std::feraiseexcept;
     using std::fesetenv;
     using std::fesetexceptflag;
     using std::fesetround;
     using std::fetestexcept;
     using std::feupdateenv;
+    using std::fexcept_t;
     // -- cinttypes<-base.hxx
     using std::imaxabs;
     using std::imaxdiv;
     // -- cmath
-    using std::double_t;
-    using std::float_t;
     using SON8_C_HEADER_MATH_NAMESPACE_STD::acosf;
     using std::acosh;
     using std::acoshf;
@@ -97,11 +98,13 @@ namespace son8::c {
     using SON8_C_HEADER_MATH_NAMESPACE_STD::coshf;
     using SON8_C_HEADER_MATH_NAMESPACE_STD::coshl;
     using SON8_C_HEADER_MATH_NAMESPACE_STD::cosl;
+    using std::double_t;
     using SON8_C_HEADER_MATH_NAMESPACE_STD::fabsf;
     using SON8_C_HEADER_MATH_NAMESPACE_STD::fabsl;
     using std::fdim;
     using std::fdimf;
     using std::fdiml;
+    using std::float_t;
     using SON8_C_HEADER_MATH_NAMESPACE_STD::floorf;
     using SON8_C_HEADER_MATH_NAMESPACE_STD::floorl;
     using std::fma;
@@ -230,9 +233,9 @@ namespace son8::c {
     using std::truncf;
     using std::truncl;
     // -- cstdlib<-base.hxx
-    using std::lldiv_t;
     using std::llabs;
     using std::lldiv;
+    using std::lldiv_t;
     // C++17
     // -- cmath
 // clang on macos (llvm) does not support math special functions in std (fully?)

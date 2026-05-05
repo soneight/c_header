@@ -4,7 +4,7 @@
     Wide character C related functionality
 */
 #include <son8/c/base.hxx>
-// std headers
+// std
 #include <cuchar>
 #include <cwchar>
 #include <cwctype>
@@ -76,9 +76,6 @@ namespace son8::c {
     using std::vswprintf;
     using std::vwprintf;
     // -- cwctype
-    using std::wctrans_t;
-    using std::wctype_t;
-    using std::wint_t;
     using std::iswalnum;
     using std::iswalpha;
     using std::iswcntrl;
@@ -95,7 +92,10 @@ namespace son8::c {
     using std::towlower;
     using std::towupper;
     using std::wctrans;
+    using std::wctrans_t;
     using std::wctype;
+    using std::wctype_t;
+    using std::wint_t;
     // C++11
     // -- cinttypes<-base.hxx
     using std::wcstoimax;

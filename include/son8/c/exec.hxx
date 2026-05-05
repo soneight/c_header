@@ -3,9 +3,8 @@
 /*
     Execution C related functionality
 */
-#include <cstdlib>
 #include <son8/c/base.hxx>
-// std headers
+// std
 #include <cerrno> // IWYU pragma: keep
 #include <csetjmp>
 #include <csignal>
@@ -16,15 +15,15 @@ namespace son8::c {
     using std::jmp_buf;
     using std::longjmp;
     // -- csignal
+    using std::raise;
     using std::sig_atomic_t;
     using std::signal;
-    using std::raise;
     // -- cstdlib<-base.hxx
     using std::abort;
     using std::atexit;
     using std::exit;
-    using std::system;
     using std::getenv;
+    using std::system;
     // C++11
     // -- cstdlib<-base.hxx
     using std::_Exit;

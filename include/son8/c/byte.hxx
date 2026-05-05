@@ -4,7 +4,7 @@
     Memory C related functionality
 */
 #include <son8/c/base.hxx>
-// std headers
+// std
 #include <cstring>
 
 namespace son8::c {

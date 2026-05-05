@@ -4,7 +4,7 @@
     Utility (other) C related functionality
 */
 #include <son8/c/base.hxx>
-// std headers
+// std
 #include <clocale>
 #include <cstdarg>
 #include <ctime>
@@ -23,18 +23,18 @@ namespace son8::c {
     // -- cstdarg
     using std::va_list;
     // -- ctime
-    using std::clock_t;
-    using std::time_t;
-    using std::tm;
     using std::asctime;
     using std::clock;
+    using std::clock_t;
     using std::ctime;
     using std::difftime;
     using std::gmtime;
     using std::localtime;
     using std::mktime;
-    using std::time;
     using std::strftime;
+    using std::time;
+    using std::time_t;
+    using std::tm;
     // C++17
     // -- ctime
     using std::timespec;
