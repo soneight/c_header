@@ -3,7 +3,7 @@
 usage:
 	cat Makefile.usage.txt
 cmake:
-	cmake -B build/ -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+	cmake -B build/ -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DSON8_C_HEADER_DUMMY_FACE_BUILD=ON
 ninja:
 	ninja -C build/
 clean:
