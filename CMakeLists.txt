@@ -1,5 +1,5 @@
 cmake_minimum_required( VERSION 3.8...3.27 )
-project( c_header VERSION 0.1.1 LANGUAGES CXX )
+project( c_header VERSION 0.1.2 LANGUAGES CXX )
 set( SON8_LIB son8__${PROJECT_NAME} )
 # options
 option( SON8_C_HEADER_DUMMY_FACE_BUILD "build interface dummy examples static library" OFF )
