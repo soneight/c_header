@@ -9,14 +9,16 @@
 // std
 #include <cassert>
 #include <cinttypes>
-#include <climits> // IWYU pragma: keep
+#include <climits>
 #include <cstddef>
 #include <cstdint>
 #include <cstdlib>
 // -- depr-rm?
-// #include <ciso646> // rm C++20
-// #include <cstdalign> // depr C++17, rm C++20
-// #include <cstdbool> // depr C++17, rm C++20
+#if 0
+#include <ciso646> // rm C++20
+#include <cstdalign> // depr C++17, rm C++20
+#include <cstdbool> // depr C++17, rm C++20
+#endif
 
 namespace son8::c {
     // C++03

@@ -5,7 +5,7 @@
 */
 #include <son8/c/base.hxx>
 // std
-#include <cerrno> // IWYU pragma: keep
+#include <cerrno>
 #include <csetjmp>
 #include <csignal>
 
