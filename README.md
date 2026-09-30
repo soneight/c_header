@@ -1,5 +1,4 @@
-# C_HEADER
-
+# `C_HEADER`
 > C++17 Standard C Entities Namespace
 
 This project is simply a namespace wrapper for standard C functions for **C++17**.
